@@ -1,0 +1,30 @@
+#%Module
+
+conflict intel gcc llvm
+
+proc ModulesHelp { } {
+}
+
+set is_module_rm  [module-info mode remove]
+
+set INTEL_CURPATH     /home/aprokop/local/opt/intel/parallel_studio_xe_2015/composer_xe_2015.0.090
+set INTEL_LEVEL       15.0.090
+set INTEL_MAJOR_LEVEL 15.0
+set INTEL_MINOR_LEVEL 090
+
+setenv          INTEL_PATH            $INTEL_CURPATH
+setenv          INTEL_VERSION         $INTEL_LEVEL
+setenv          INTEL_MAJOR_VERSION   $INTEL_MAJOR_LEVEL
+setenv          INTEL_MINOR_VERSION   $INTEL_MINOR_LEVEL
+setenv          MKLROOT               $INTEL_CURPATH/mkl
+
+prepend-path    LD_LIBRARY_PATH $INTEL_CURPATH/compiler/lib/intel64:$INTEL_CURPATH/mpirt/lib/intel64:$INTEL_CURPATH/mkl/lib/intel64
+prepend-path    PATH            $INTEL_CURPATH/bin/intel64:$INTEL_CURPATH/mpirt/bin/intel64
+prepend-path    MANPATH         $INTEL_CURPATH/man/en_US
+prepend-path    NLSPATH         $INTEL_CURPATH/compiler/lib/intel64/locale/en_US/%N
+prepend-path    LIBRARY_PATH    $INTEL_CURPATH/compiler/lib/intel64
+
+setenv          CC              icc
+setenv          CXX             icpc
+setenv          OMPI_MPICC      icc
+setenv          OMPI_MPICXX     icpc
