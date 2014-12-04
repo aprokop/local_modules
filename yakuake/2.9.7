@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set YAKUAKE_VERSION 2.9.7
+set YAKUAKE_PATH /home/aprokop/local/opt/yakuake-$YAKUAKE_VERSION
+
+prepend-path    PATH            $YAKUAKE_PATH/bin

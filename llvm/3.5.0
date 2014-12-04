@@ -3,18 +3,18 @@
 conflict llvm gcc clang
 
 proc ModulesHelp { } {
-    global LLVM_LEVEL
-    global LLVM_CURPATH
-    if { [ file exists $LLVM_CURPATH/release_info ] } {
-        set REL_INFO [ exec cat $LLVM_CURPATH/release_info ]
+    global LLVM_VERSION
+    global LLVM_PATH
+    if { [ file exists $LLVM_PATH/release_info ] } {
+        set REL_INFO [ exec cat $LLVM_PATH/release_info ]
     } else {
         set REL_INFO ""
     }
     puts stderr "$REL_INFO"
     puts stderr ""
     puts stderr "==================================================================="
-    puts stderr "To re-display LLVM/$LLVM_LEVEL release information,"
-    puts stderr "type:    less $LLVM_CURPATH/release_info"
+    puts stderr "To re-display LLVM/$LLVM_VERSION release information,"
+    puts stderr "type:    less $LLVM_PATH/release_info"
     puts stderr "==================================================================="
     puts stderr ""
 }
@@ -24,18 +24,19 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set LLVM_LEVEL 3.5.0
-set LLVM_CURPATH /home/aprokop/local/opt/llvm-$LLVM_LEVEL
+set LLVM_VERSION 3.5.0
+set LLVM_PATH /home/aprokop/local/opt/llvm-$LLVM_VERSION
 
-prepend-path    PATH            $LLVM_CURPATH/bin
-prepend-path    MANPATH         $LLVM_CURPATH/share/man
-prepend-path    INFOPATH        $LLVM_CURPATH/share/info
-prepend-path    LD_LIBRARY_PATH $LLVM_CURPATH/lib
+prepend-path    PATH            $LLVM_PATH/bin
+prepend-path    MANPATH         $LLVM_PATH/share/man
+prepend-path    INFOPATH        $LLVM_PATH/share/info
+prepend-path    LD_LIBRARY_PATH $LLVM_PATH/lib
 
-setenv          LLVM_PATH       $LLVM_CURPATH
-setenv          LLVM_VERSION    $LLVM_LEVEL
+setenv          LLVM_PATH       $LLVM_PATH
+setenv          LLVM_VERSION    $LLVM_VERSION
 
 setenv          CC              clang
 setenv          CXX             clang++
 setenv          OMPI_MPICC      clang
 setenv          OMPI_MPICXX     clang++
+set GCC_PATH

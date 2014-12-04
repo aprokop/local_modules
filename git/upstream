@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set GIT_PATH       /home/aprokop/local/opt/git
+
+prepend-path    PATH            $GIT_PATH/bin
+prepend-path    MANPATH         $GIT_PATH/share/man

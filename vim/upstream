@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set VIM_PATH       /home/aprokop/local/opt/VIM
+
+prepend-path    PATH            $VIM_PATH/bin
+prepend-path    MANPATH         $VIM_PATH/share/man

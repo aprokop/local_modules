@@ -1,0 +1,14 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set TMUX_PATH       /home/aprokop/local/opt/tmux
+set LIBEVENT2_PATH  /home/aprokop/local/opt/libevent-2.0.21/
+
+prepend-path    PATH                $TMUX_PATH/bin
+prepend-path    LD_LIBRARY_PATH     $LIBEVENT2_PATH/lib
+prepend-path    MANPATH             $TMUX_PATH/share/man

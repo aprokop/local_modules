@@ -1,0 +1,19 @@
+#%Module
+
+conflict mpich
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set BOOST_VERSION 1.57.0
+set BOOST_PATH /home/aprokop/local/opt/boost-$BOOST_VERSION
+
+prepend-path    CPATH           $BOOST_PATH/include
+prepend-path    LD_LIBRARY_PATH $BOOST_PATH/lib
+prepend-path    MANPATH         $BOOST_PATH/share/man
+prepend-path    INFOPATH        $BOOST_PATH/share/info

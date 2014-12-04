@@ -1,0 +1,13 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set SUPERLU_VERSION     4.3
+set SUPERLU_PATH        /home/aprokop/local/opt/superlu-$SUPERLU_VERSION
+
+prepend-path    CPATH               $SUPERLU_PATH/include
+prepend-path    LD_LIBRARY_PATH     $SUPERLU_PATH/lib

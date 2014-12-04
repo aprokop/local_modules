@@ -1,0 +1,17 @@
+#%Module
+conflict llvm gcc clang
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+setenv          CC              clang
+setenv          CXX             clang++
+setenv          OMPI_MPICC      clang
+setenv          OMPI_MPICXX     clang++
+setenv          OMPI_CFLAGS     '-fdiagnostics-color'
+setenv          OMPI_CXXFLAGS   '-fdiagnostics-color'
