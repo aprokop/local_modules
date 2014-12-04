@@ -1,0 +1,17 @@
+#%Module
+
+set mod_list { \
+    cmake \
+    emacs \
+    git \
+    superlu \
+    tig \
+    tmux \
+    urxvt \
+    vim \
+    yakuake \
+}
+
+foreach prod $mod_list {
+    module load ${prod}
+}
