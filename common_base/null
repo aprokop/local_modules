@@ -4,6 +4,7 @@ set mod_list { \
     cmake \
     emacs \
     git \
+    kdiff3 \
     superlu \
     tig \
     tmux \

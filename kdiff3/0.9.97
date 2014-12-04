@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set KDIFF3_VERSION  0.9.97
+set KDIFF3_PATH     /home/aprokop/local/opt/kdiff3-$KDIFF3_VERSION
+
+prepend-path    PATH    $KDIFF3_PATH/bin

@@ -1,0 +1,11 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set NUMPY_PATH       /home/aprokop/local/opt/numpy
+
+prepend-path    PYTHONPATH      $NUMPY_PATH/lib64/python2.6/site-packages
