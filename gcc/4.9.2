@@ -39,7 +39,7 @@ prepend-path    PATH            /home/aprokop/local/bin
 prepend-path    PATH            /home/aprokop/bin
 prepend-path    MANPATH         $GCC_CURPATH/share/man
 prepend-path    INFOPATH        $GCC_CURPATH/share/info
-prepend-path    LD_LIBRARY_PATH $GCC_CURPATH/lib
+prepend-path    LD_LIBRARY_PATH $GCC_CURPATH/lib:$GCC_CURPATH/lib64
 
 setenv          CC              gcc
 setenv          CXX             g++
