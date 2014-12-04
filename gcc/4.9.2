@@ -1,6 +1,6 @@
 #%Module
 
-conflict gcc llvm intel
+conflict gcc intel llvm
 
 proc ModulesHelp { } {
     global GCC_LEVEL
@@ -24,7 +24,7 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set GCC_LEVEL 4.8.0
+set GCC_LEVEL 4.9.2
 set GCC_CURPATH /home/aprokop/local/opt/gcc-$GCC_LEVEL
 
 setenv          GCC_PATH        $GCC_CURPATH
