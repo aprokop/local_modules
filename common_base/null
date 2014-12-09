@@ -13,6 +13,7 @@ set mod_list { \
     urxvt \
     vifm \
     vim \
+    wcalc \
 }
 
 foreach prod $mod_list {
