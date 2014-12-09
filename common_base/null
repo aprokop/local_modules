@@ -13,7 +13,6 @@ set mod_list { \
     urxvt \
     vifm \
     vim \
-    yakuake \
 }
 
 foreach prod $mod_list {
