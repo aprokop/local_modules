@@ -1,9 +1,6 @@
 #%Module
 conflict llvm gcc clang
 
-proc ModulesHelp { } {
-}
-
 set _module_name  [module-info name]
 set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
