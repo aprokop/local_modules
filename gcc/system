@@ -1,0 +1,16 @@
+#%Module
+conflict gcc intel llvm
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set GCC_VERSION 4.4.7
+
+setenv          CC              gcc
+setenv          CXX             g++
+setenv          OMPI_MPICC      gcc
+setenv          OMPI_CFLAGS     -fdiagnostics-color
+setenv          OMPI_MPICXX     g++
+setenv          OMPI_CXXFLAGS   -fdiagnostics-color
