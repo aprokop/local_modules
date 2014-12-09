@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set HTOP_PATH       /home/aprokop/local/opt/htop
+
+prepend-path    PATH            $HTOP_PATH/bin
+prepend-path    MANPATH         $HTOP_PATH/share/man
