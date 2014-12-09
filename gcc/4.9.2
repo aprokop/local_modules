@@ -32,11 +32,15 @@ setenv          GCC_VERSION     $GCC_LEVEL
 setenv          GNU_VERSION     $GCC_LEVEL
 
 # PATH is complex because of our use of ccache and its symbolic linkage
-remove-path     PATH            /home/aprokop/bin
-remove-path     PATH            /home/aprokop/local/bin
+if { [ module-info mode load ] } {
+    remove-path     PATH            /home/aprokop/bin
+    remove-path     PATH            /home/aprokop/local/bin
+}
 prepend-path    PATH            $GCC_CURPATH/bin
-prepend-path    PATH            /home/aprokop/local/bin
-prepend-path    PATH            /home/aprokop/bin
+if { [ module-info mode load ] } {
+    prepend-path    PATH            /home/aprokop/local/bin
+    prepend-path    PATH            /home/aprokop/bin
+}
 prepend-path    MANPATH         $GCC_CURPATH/share/man
 prepend-path    INFOPATH        $GCC_CURPATH/share/info
 prepend-path    LD_LIBRARY_PATH $GCC_CURPATH/lib:$GCC_CURPATH/lib64
