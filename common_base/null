@@ -3,6 +3,7 @@
 set mod_list { \
     cmake \
     emacs \
+    feh \
     git \
     htop \
     kdiff3 \
