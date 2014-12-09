@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set EXTUNDELETE_VERSION     0.2.4
+set EXTUNDELETE_PATH        /home/aprokop/local/opt/extundelete-$EXTUNDELETE_VERSION
+
+prepend-path    PATH       $EXTUNDELETE_PATH/bin
