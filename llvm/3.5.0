@@ -31,5 +31,5 @@ setenv          CC              clang
 setenv          CXX             clang++
 setenv          OMPI_MPICC      clang
 setenv          OMPI_MPICXX     clang++
-setenv          OMPI_CFLAGS     '-fdiagnostics-color'
-setenv          OMPI_CXXFLAGS   '-fdiagnostics-color'
+setenv          OMPI_CFLAGS     "-fdiagnostics-color"
+setenv          OMPI_CXXFLAGS   "-fdiagnostics-color"
