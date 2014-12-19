@@ -2,6 +2,7 @@
 
 set mod_list { \
     cmake \
+    ctags \
     emacs \
     feh \
     git \
