@@ -9,6 +9,7 @@ set mod_list { \
     htop \
     kdiff3 \
     superlu \
+    texlive \
     tig \
     tmux \
     urxvt \
