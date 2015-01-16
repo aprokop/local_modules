@@ -31,6 +31,8 @@ setenv          GCC_PATH        $GCC_CURPATH
 setenv          GCC_VERSION     $GCC_LEVEL
 setenv          GNU_VERSION     $GCC_LEVEL
 
+set-alias       gcc             "gcc -fdiagnostics-color=auto"
+
 # PATH is complex because of our use of ccache and its symbolic linkage
 if { [ module-info mode load ] } {
     remove-path     PATH            /home/aprokop/bin
