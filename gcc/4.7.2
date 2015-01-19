@@ -3,7 +3,7 @@
 conflict gcc intel llvm
 
 proc ModulesHelp { } {
-    global GCC_LEVEL
+    global GCC_VERSION
     global GCC_CURPATH
     if { [ file exists $GCC_CURPATH/release_info ] } {
         set REL_INFO [ exec cat $GCC_CURPATH/release_info ]
@@ -13,7 +13,7 @@ proc ModulesHelp { } {
     puts stderr "$REL_INFO"
     puts stderr ""
     puts stderr "==================================================================="
-    puts stderr "To re-display gcc/$GCC_LEVEL release information,"
+    puts stderr "To re-display gcc/$GCC_VERSION release information,"
     puts stderr "type:    less $GCC_CURPATH/release_info"
     puts stderr "==================================================================="
     puts stderr ""
@@ -24,12 +24,12 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set GCC_LEVEL 4.7.2
-set GCC_CURPATH /home/aprokop/local/opt/gcc-$GCC_LEVEL
+set GCC_VERSION 4.7.2
+set GCC_CURPATH /home/aprokop/local/opt/gcc-$GCC_VERSION
 
 setenv          GCC_PATH        $GCC_CURPATH
-setenv          GCC_VERSION     $GCC_LEVEL
-setenv          GNU_VERSION     $GCC_LEVEL
+setenv          GCC_VERSION     $GCC_VERSION
+setenv          GNU_VERSION     $GCC_VERSION
 
 # PATH is complex because of our use of ccache and its symbolic linkage
 if { [ module-info mode load ] } {
