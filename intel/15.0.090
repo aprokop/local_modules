@@ -7,7 +7,7 @@ proc ModulesHelp { } {
 
 set is_module_rm  [module-info mode remove]
 
-set INTEL_CURPATH     /home/aprokop/local/opt/intel_composer_xe_2015.0.090/
+set INTEL_CURPATH     /home/aprokop/local/opt/intel/intel-composer_xe-2015.0.090/
 set INTEL_LEVEL       15.0.090
 set INTEL_MAJOR_LEVEL 15.0
 set INTEL_MINOR_LEVEL 090
