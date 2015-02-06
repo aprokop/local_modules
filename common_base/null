@@ -1,6 +1,7 @@
 #%Module
 
 set mod_list { \
+    autojump \
     cmake \
     ctags \
     emacs \
