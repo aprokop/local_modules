@@ -1,0 +1,19 @@
+#%Module
+
+conflict mpich
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set NETCDF_VERSION 4.3.0
+set NETCDF_PATH /home/aprokop/local/opt/netcdf-wo4-$NETCDF_VERSION
+
+prepend-path    PATH            $NETCDF_PATH/bin
+prepend-path    CPATH           $NETCDF_PATH/include
+prepend-path    LD_LIBRARY_PATH $NETCDF_PATH/lib
+prepend-path    MANPATH         $NETCDF_PATH/share/man
