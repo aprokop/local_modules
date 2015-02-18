@@ -1,0 +1,18 @@
+#%Module
+
+proc ModulesHelp { } {
+}
+
+module load cuda/6.5-gcc
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set AMGX_VERSION 2014_12_22-cuda-6.5
+set AMGX_PATH /opt/nvidia/amgx-$AMGX_VERSION
+
+setenv          LM_LICENSE_FILE     /home/aprokop/.nvidia/licenses/amgx_trial-exp-Mar2015.lic
+
+prepend-path    LD_LIBRARY_PATH $AMGX_PATH/lib
