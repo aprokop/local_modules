@@ -17,6 +17,7 @@ set mod_list { \
     vifm \
     vim \
     wcalc \
+    yakuake
 }
 
 foreach prod $mod_list {
