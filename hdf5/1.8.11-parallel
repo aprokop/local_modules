@@ -10,7 +10,7 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set HDF5_VERSION 1.8.14
+set HDF5_VERSION 1.8.11
 set HDF5_PATH /home/aprokop/local/opt/hdf5-parallel-$HDF5_VERSION
 
 prepend-path    PATH            $HDF5_PATH/bin
