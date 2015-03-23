@@ -11,5 +11,5 @@ set VTUNE_PATH     /home/aprokop/local/opt/intel/vtune_amplifier_xe_${VTUNE_VERS
 setenv VTUNE_AMPLIFIER_XE_2013_DIR ${VTUNE_PATH}
 
 prepend-path    PATH            $VTUNE_PATH/bin64
-prepend-path    LD_LIBRARY_PATH $VTUNE_PATH/lib64
+# Do *not* set LD_LIBRARY_PATH
 prepend-path    MANPATH         $VTUNE_PATH/man/
