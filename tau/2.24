@@ -1,0 +1,15 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set TAU_VERSION     2.24
+set TAU_PATH        /home/aprokop/local/opt/tau-$TAU_VERSION
+
+prepend-path    PATH            $TAU_PATH/x86_64/bin
+prepend-path    LD_LIBRARY_PATH $TAU_PATH/x86_64/lib
+prepend-path    CPATH           $TAU_PATH/include
+prepend-path    MANPATH         $TAU_PATH/man
