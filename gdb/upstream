@@ -1,7 +1,5 @@
 #%Module
 
-conflict mpich
-
 proc ModulesHelp { } {
 }
 
