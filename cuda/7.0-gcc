@@ -1,0 +1,19 @@
+#%Module
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set CUDA_VERSION 7.0
+set CUDA_PATH /usr/local/cuda-7.0/
+
+prepend-path    PATH            $CUDA_PATH/bin:/home/aprokop/code/trilinos/master/packages/kokkos/config # nvcc_wrapper
+prepend-path    LD_LIBRARY_PATH $CUDA_PATH/lib64:$CUDA_PATH/lib
+
+setenv          CXX             nvcc_wrapper
+setenv          OMPI_MPICXX     nvcc_wrapper
+setenv          OMPI_CXXFLAGS   "-ccbin g++"
