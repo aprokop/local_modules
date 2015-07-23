@@ -1,0 +1,13 @@
+#%Module1.0#####################################################################
+# vi:set filetype=tcl:
+#
+# Modified SDH 20150206 to add CC override
+
+conflict       nvcc-wrapper
+
+module load gcc/4.9.2
+
+prepend-path   PATH     /home/aprokop/local/opt/nvcc-wrapper/gnu/bin
+
+# setenv  OMPI_MPICC     nvcc_wrapper
+setenv  OMPI_MPICXX    nvcxx_wrapper
