@@ -5,7 +5,7 @@
 
 conflict       nvcc-wrapper
 
-module load gcc/4.9.2
+module load gcc/4.8.4
 
 prepend-path   PATH     /home/aprokop/local/opt/nvcc-wrapper/gnu/bin
 
