@@ -12,6 +12,7 @@ set CUDA_VERSION 6.5
 set CUDA_PATH /opt/nvidia/cuda-$CUDA_VERSION
 
 prepend-path    PATH            $CUDA_PATH/bin:/home/aprokop/code/trilinos/master/packages/kokkos/config # nvcc_wrapper
+prepend-path    CPATH           $CUDA_PATH/include
 prepend-path    LD_LIBRARY_PATH $CUDA_PATH/lib64:$CUDA_PATH/lib
 
 setenv          CXX             nvcc_wrapper
