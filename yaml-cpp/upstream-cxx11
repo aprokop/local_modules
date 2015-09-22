@@ -1,0 +1,12 @@
+#%Module
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set YAML_VERSION upstream
+set YAML_PATH /home/aprokop/local/opt/yaml-cxx11-$YAML_VERSION
+
+prepend-path    CPATH           $YAML_PATH/include
+prepend-path    LD_LIBRARY_PATH $YAML_PATH/lib
+prepend-path    PKG_CONFIG_PATH $YAML_PATH/lib/pkgconfig
