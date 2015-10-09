@@ -1,0 +1,30 @@
+#%Module
+
+prereq gcc/4.9.2
+
+proc ModulesHelp { } {
+}
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set CUDA_VERSION 7.5
+set CUDA_PATH /opt/nvidia/cuda-${CUDA_VERSION}
+
+# PATH is complex because of our use of colornvcc and its symbolic linkage
+if { [ module-info mode load ] } {
+    remove-path     PATH        /home/aprokop/bin
+    remove-path     PATH        /home/aprokop/local/bin
+}
+prepend-path    PATH            $CUDA_PATH/bin
+if { [ module-info mode load ] } {
+    prepend-path    PATH        /home/aprokop/local/bin
+    prepend-path    PATH        /home/aprokop/bin
+}
+prepend-path    LD_LIBRARY_PATH $CUDA_PATH/lib64:$CUDA_PATH/lib
+
+setenv          CXX             nvcc_wrapper
+setenv          OMPI_MPICXX     nvcc_wrapper
+setenv          OMPI_CXXFLAGS   "-ccbin g++"
