@@ -5,8 +5,6 @@
 
 conflict       nvcc-wrapper
 
-module load gcc/4.8.4
-
 prepend-path   PATH     /home/aprokop/local/opt/nvcc-wrapper/gnu/bin
 
 # setenv  OMPI_MPICC     nvcc_wrapper
