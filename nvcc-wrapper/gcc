@@ -1,11 +1,12 @@
-#%Module1.0#####################################################################
-# vi:set filetype=tcl:
-#
-# Modified SDH 20150206 to add CC override
+#%Module
+proc ModulesHelp { } { }
 
 conflict       nvcc-wrapper
 
 prepend-path   PATH     /home/aprokop/local/opt/nvcc-wrapper/gnu/bin
 
-# setenv  OMPI_MPICC     nvcc_wrapper
-setenv  OMPI_MPICXX    nvcxx_wrapper
+# setenv  OMPI_MPICC              nvcc_wrapper
+setenv  OMPI_MPICXX             nvcxx_wrapper
+
+# Force a fence after each kernel launch (for UVM which is required by Tpetra)
+setenv  CUDA_LAUNCH_BLOCKING    1
