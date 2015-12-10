@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set CMAKE_VERSION   3.4.1
+set CMAKE_PATH      /home/aprokop/local/opt/cmake-$CMAKE_VERSION
+
+prepend-path    PATH    $CMAKE_PATH/bin
