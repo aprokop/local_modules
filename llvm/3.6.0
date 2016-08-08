@@ -8,7 +8,7 @@ set os            [uname release]
 
 set LLVM_VERSION 3.6.0
 set LLVM_PATH   /home/aprokop/local/opt/llvm-$LLVM_VERSION
-set GCC_PATH    /home/aprokop/local/opt/gcc-4.9.2
+set GCC_PATH    /home/aprokop/local/opt/gcc-5.1.0
 
 set-alias       clang       "clang   --gcc-toolchain=$GCC_PATH"
 set-alias       clang++     "clang++ --gcc-toolchain=$GCC_PATH"
@@ -23,10 +23,10 @@ if { [ module-info mode load ] } {
     prepend-path    PATH            /home/aprokop/local/bin
     prepend-path    PATH            /home/aprokop/bin
 }
-prepend-path    CPATH           $LLVM_PATH/include:$GCC_PATH/include
+prepend-path    CPATH           $LLVM_PATH/include
 prepend-path    MANPATH         $LLVM_PATH/share/man
 prepend-path    INFOPATH        $LLVM_PATH/share/info
-prepend-path    LD_LIBRARY_PATH $LLVM_PATH/lib:$GCC_PATH/lib64
+prepend-path    LD_LIBRARY_PATH $LLVM_PATH/lib
 
 setenv          LLVM_PATH       $LLVM_PATH
 setenv          LLVM_VERSION    $LLVM_VERSION
