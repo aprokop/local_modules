@@ -1,0 +1,15 @@
+#%Module
+
+proc ModulesHelp { } {
+}
+
+set is_module_rm  [module-info mode remove]
+
+set ADVISOR_VERSION  2016.1.20.440949
+set ADVISOR_PATH     /home/aprokop/local/opt/intel/advisor_xe_${ADVISOR_VERSION}
+
+setenv ADVISOR_XE_2016_DIR ${ADVISOR_PATH}
+
+prepend-path    PATH            $ADVISOR_PATH/bin64
+# Do *not* set LD_LIBRARY_PATH
+prepend-path    MANPATH         $ADVISOR_PATH/man/
