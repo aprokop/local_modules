@@ -1,23 +1,7 @@
 #%Module
 
 set mod_list { \
-    autojump \
-    cmake \
-    ctags \
-    emacs \
-    feh \
-    git \
-    htop \
-    kdiff3 \
-    superlu \
-    texlive \
-    tig \
-    tmux \
-    urxvt \
-    vifm \
-    vim \
-    wcalc \
-    yakuake
+    svg2tikz
 }
 
 foreach prod $mod_list {
