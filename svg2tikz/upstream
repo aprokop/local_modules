@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set SVG2TIKZ_PATH               /home/prok/local/opt/svg2tikz
+
+prepend-path    PATH            $SVG2TIKZ_PATH/bin
+prepend-path    PYTHONPATH      $SVG2TIKZ_PATH/lib/python3.5/site-packages
