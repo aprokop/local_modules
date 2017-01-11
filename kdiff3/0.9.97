@@ -7,6 +7,6 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set KDIFF3_VERSION  0.9.97
-set KDIFF3_PATH     /home/aprokop/local/opt/kdiff3-$KDIFF3_VERSION
+set KDIFF3_PATH     $env(HOME)/local/opt/kdiff3-$KDIFF3_VERSION
 
 prepend-path    PATH    $KDIFF3_PATH/bin

@@ -5,7 +5,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set METIS_VERSION 5.1.0
-set METIS_PATH /home/aprokop/local/opt/metis-$METIS_VERSION
+set METIS_PATH $env(HOME)/local/opt/metis-$METIS_VERSION
 
 prepend-path    CPATH           $METIS_PATH/include
 prepend-path    PATH            $METIS_PATH/bin

@@ -7,21 +7,21 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set LLVM_VERSION 3.6.0
-set LLVM_PATH   /home/aprokop/local/opt/llvm-$LLVM_VERSION
-set GCC_PATH    /home/aprokop/local/opt/gcc-5.1.0
+set LLVM_PATH   $env(HOME)/local/opt/llvm-$LLVM_VERSION
+set GCC_PATH    $env(HOME)/local/opt/gcc-5.1.0
 
 set-alias       clang       "clang   --gcc-toolchain=$GCC_PATH"
 set-alias       clang++     "clang++ --gcc-toolchain=$GCC_PATH"
 
 # PATH is complex because of our use of ccache and its symbolic linkage
 if { [ module-info mode load ] } {
-    remove-path     PATH            /home/aprokop/bin
-    remove-path     PATH            /home/aprokop/local/bin
+    remove-path     PATH            $env(HOME)/bin
+    remove-path     PATH            $env(HOME)/local/bin
 }
 prepend-path    PATH            $LLVM_PATH/bin
 if { [ module-info mode load ] } {
-    prepend-path    PATH            /home/aprokop/local/bin
-    prepend-path    PATH            /home/aprokop/bin
+    prepend-path    PATH            $env(HOME)/local/bin
+    prepend-path    PATH            $env(HOME)/bin
 }
 prepend-path    CPATH           $LLVM_PATH/include
 prepend-path    MANPATH         $LLVM_PATH/share/man

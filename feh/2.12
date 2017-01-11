@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set FEH_VERSION     2.12
-set FEH_PATH        /home/aprokop/local/opt/feh-$FEH_VERSION
+set FEH_PATH        $env(HOME)/local/opt/feh-$FEH_VERSION
 
 prepend-path    PATH            $FEH_PATH/bin
 prepend-path    MANPATH         $FEH_PATH/share/man

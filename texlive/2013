@@ -7,6 +7,6 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set TEXLIVE_VERSION     2013
-set TEXLIVE_PATH        /home/aprokop/local/opt/texlive-$TEXLIVE_VERSION
+set TEXLIVE_PATH        $env(HOME)/local/opt/texlive-$TEXLIVE_VERSION
 
 prepend-path    PATH    $TEXLIVE_PATH/bin

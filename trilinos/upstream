@@ -6,7 +6,7 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set TRILINOS_PATH       /home/aprokop/local/opt/trilinos
+set TRILINOS_PATH       $env(HOME)/local/opt/trilinos
 
 prepend-path    PATH            $TRILINOS_PATH/bin
 prepend-path    CPATH           $TRILINOS_PATH/include

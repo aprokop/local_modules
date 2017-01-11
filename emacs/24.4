@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set EMACS_VERSION 24.4
-set EMACS_PATH /home/aprokop/local/opt/emacs-$EMACS_VERSION
+set EMACS_PATH $env(HOME)/local/opt/emacs-$EMACS_VERSION
 
 prepend-path    PATH            $EMACS_PATH/bin
 prepend-path    LD_LIBRARY_PATH $EMACS_PATH/lib

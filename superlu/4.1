@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set SUPERLU_VERSION     4.1
-set SUPERLU_PATH        /home/aprokop/local/opt/superlu-$SUPERLU_VERSION
+set SUPERLU_PATH        $env(HOME)/local/opt/superlu-$SUPERLU_VERSION
 
 prepend-path    CPATH               $SUPERLU_PATH/include
 prepend-path    LD_LIBRARY_PATH     $SUPERLU_PATH/lib

@@ -15,13 +15,13 @@ set CUDA_PATH /opt/nvidia/cuda-${CUDA_VERSION}
 
 # PATH is complex because of our use of colornvcc and its symbolic linkage
 if { [ module-info mode load ] } {
-    remove-path     PATH        /home/aprokop/bin
-    remove-path     PATH        /home/aprokop/local/bin
+    remove-path     PATH        $env(HOME)/bin
+    remove-path     PATH        $env(HOME)/local/bin
 }
 prepend-path    PATH            $CUDA_PATH/bin
 if { [ module-info mode load ] } {
-    prepend-path    PATH        /home/aprokop/local/bin
-    prepend-path    PATH        /home/aprokop/bin
+    prepend-path    PATH        $env(HOME)/local/bin
+    prepend-path    PATH        $env(HOME)/bin
 }
 prepend-path    LD_LIBRARY_PATH $CUDA_PATH/lib64:$CUDA_PATH/lib
 

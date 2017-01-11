@@ -27,7 +27,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set GCC_VERSION 5.1.0
-set GCC_CURPATH /home/aprokop/local/opt/gcc-$GCC_VERSION
+set GCC_CURPATH $env(HOME)/local/opt/gcc-$GCC_VERSION
 
 setenv          GCC_PATH        $GCC_CURPATH
 setenv          GCC_VERSION     $GCC_VERSION
@@ -37,13 +37,13 @@ set-alias       gcc             "gcc -fdiagnostics-color=auto"
 
 # PATH is complex because of our use of ccache and its symbolic linkage
 if { [ module-info mode load ] } {
-    remove-path     PATH            /home/aprokop/bin
-    remove-path     PATH            /home/aprokop/local/bin
+    remove-path     PATH            $env(HOME)/bin
+    remove-path     PATH            $env(HOME)/local/bin
 }
 prepend-path    PATH            $GCC_CURPATH/bin
 if { [ module-info mode load ] } {
-    prepend-path    PATH            /home/aprokop/local/bin
-    prepend-path    PATH            /home/aprokop/bin
+    prepend-path    PATH            $env(HOME)/local/bin
+    prepend-path    PATH            $env(HOME)/bin
 }
 prepend-path    MANPATH         $GCC_CURPATH/share/man
 prepend-path    INFOPATH        $GCC_CURPATH/share/info

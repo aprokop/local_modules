@@ -7,6 +7,6 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set PARAVIEW_VERSION    4.3.1
-set PARAVIEW_PATH       /home/aprokop/local/opt/paraview-$PARAVIEW_VERSION
+set PARAVIEW_PATH       $env(HOME)/local/opt/paraview-$PARAVIEW_VERSION
 
 prepend-path    PATH    $PARAVIEW_PATH/bin

@@ -7,6 +7,6 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set CMAKE_VERSION   3.3.2
-set CMAKE_PATH      /home/aprokop/local/opt/cmake-$CMAKE_VERSION
+set CMAKE_PATH      $env(HOME)/local/opt/cmake-$CMAKE_VERSION
 
 prepend-path    PATH    $CMAKE_PATH/bin

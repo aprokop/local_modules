@@ -9,7 +9,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set MATIO_VERSION 1.5.2
-set MATIO_PATH /home/aprokop/local/opt/matio-$MATIO_VERSION
+set MATIO_PATH $env(HOME)/local/opt/matio-$MATIO_VERSION
 
 prepend-path    PATH                $MATIO_PATH/bin
 prepend-path    CPATH               $MATIO_PATH/include

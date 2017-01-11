@@ -6,7 +6,7 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set HWLOC_PATH       /home/aprokop/local/opt/hwloc
+set HWLOC_PATH       $env(HOME)/local/opt/hwloc
 
 prepend-path    PATH            $HWLOC_PATH/bin
 prepend-path    CPATH           $HWLOC_PATH/include

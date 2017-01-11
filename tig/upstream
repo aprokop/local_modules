@@ -6,6 +6,6 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set TIG_PATH       /home/aprokop/local/opt/tig
+set TIG_PATH       $env(HOME)/local/opt/tig
 
 prepend-path    PATH            $TIG_PATH/bin

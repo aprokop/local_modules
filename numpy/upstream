@@ -6,7 +6,7 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set NUMPY_PATH       /home/aprokop/local/opt/numpy
+set NUMPY_PATH       $env(HOME)/local/opt/numpy
 
 prepend-path    PATH            $NUMPY_PATH/bin
 prepend-path    PYTHONPATH      $NUMPY_PATH/lib64/python2.6/site-packages

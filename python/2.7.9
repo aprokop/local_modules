@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set VERSION         2.7.9
-set PYTHON_PATH     /home/aprokop/local/opt/python-$VERSION
+set PYTHON_PATH     $env(HOME)/local/opt/python-$VERSION
 
 prepend-path    PATH                $PYTHON_PATH/bin
 prepend-path    CPATH               $PYTHON_PATH/include

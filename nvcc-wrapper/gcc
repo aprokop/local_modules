@@ -3,7 +3,7 @@ proc ModulesHelp { } { }
 
 conflict       nvcc-wrapper
 
-prepend-path   PATH     /home/aprokop/local/opt/nvcc-wrapper/gnu/bin
+prepend-path   PATH     $env(HOME)/local/opt/nvcc-wrapper/gnu/bin
 
 # setenv  OMPI_MPICC              nvcc_wrapper
 setenv  OMPI_MPICXX             nvcxx_wrapper

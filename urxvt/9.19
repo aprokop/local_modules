@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set URXVT_VERSION   9.19
-set URXVT_PATH      /home/aprokop/local/opt/urxvt-$URXVT_VERSION
+set URXVT_PATH      $env(HOME)/local/opt/urxvt-$URXVT_VERSION
 
 prepend-path    PATH                $URXVT_PATH/bin
 prepend-path    LD_LIBRARY_PATH     $URXVT_PATH/lib

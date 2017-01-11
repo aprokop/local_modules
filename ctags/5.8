@@ -7,7 +7,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set CTAGS_VERSION   5.8
-set CTAGS_PATH      /home/aprokop/local/opt/ctags-exuberant-$CTAGS_VERSION
+set CTAGS_PATH      $env(HOME)/local/opt/ctags-exuberant-$CTAGS_VERSION
 
 prepend-path    PATH        $CTAGS_PATH/bin
 prepend-path    MANPATH     $CTAGS_PATH/share/man

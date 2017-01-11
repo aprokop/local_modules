@@ -8,7 +8,7 @@ set os            [uname release]
 
 module load numpy
 
-set MATPLOTLIB_PATH       /home/aprokop/local/opt/matplotlib
+set MATPLOTLIB_PATH       $env(HOME)/local/opt/matplotlib
 
 prepend-path    PATH            $MATPLOTLIB_PATH/bin
 prepend-path    PYTHONPATH      $MATPLOTLIB_PATH/lib64/python2.6/site-packages

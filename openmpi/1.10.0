@@ -11,7 +11,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set OPENMPI_VERSION 1.10.0
-set OPENMPI_PATH /home/aprokop/local/opt/openmpi-$OPENMPI_VERSION
+set OPENMPI_PATH $env(HOME)/local/opt/openmpi-$OPENMPI_VERSION
 
 prepend-path    PATH            $OPENMPI_PATH/bin
 prepend-path    CPATH           $OPENMPI_PATH/include

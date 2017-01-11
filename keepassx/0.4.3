@@ -7,6 +7,6 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set KEEPASSX_VERSION    0.4.3
-set KEEPASSX_PATH       /home/aprokop/local/opt/keepassx-$KEEPASSX_VERSION
+set KEEPASSX_PATH       $env(HOME)/local/opt/keepassx-$KEEPASSX_VERSION
 
 prepend-path    PATH    $KEEPASSX_PATH/bin

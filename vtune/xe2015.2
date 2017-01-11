@@ -6,7 +6,7 @@ proc ModulesHelp { } {
 set is_module_rm  [module-info mode remove]
 
 set VTUNE_VERSION  2015.2.0.393444
-set VTUNE_PATH     /home/aprokop/local/opt/intel/vtune_amplifier_xe_${VTUNE_VERSION}
+set VTUNE_PATH     $env(HOME)/local/opt/intel/vtune_amplifier_xe_${VTUNE_VERSION}
 
 setenv VTUNE_AMPLIFIER_XE_2015_DIR ${VTUNE_PATH}
 
