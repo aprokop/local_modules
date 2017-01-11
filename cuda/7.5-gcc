@@ -11,7 +11,7 @@ set sys           [uname sysname]
 set os            [uname release]
 
 set CUDA_VERSION 7.5
-set CUDA_PATH /opt/nvidia/cuda-${CUDA_VERSION}
+set CUDA_PATH /usr/local/cuda-${CUDA_VERSION}
 
 # PATH is complex because of our use of colornvcc and its symbolic linkage
 if { [ module-info mode load ] } {
