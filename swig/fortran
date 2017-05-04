@@ -1,0 +1,12 @@
+#%Module
+proc ModulesHelp { } { }
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set SWIG_VERSION    fortran
+set SWIG_PATH       $env(HOME)/local/opt/swig-$SWIG_VERSION
+
+prepend-path    PATH                $SWIG_PATH/bin
