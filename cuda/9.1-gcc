@@ -1,7 +1,5 @@
 #%Module
 
-# prereq gcc/4.9.2
-
 proc ModulesHelp { } {
 }
 
@@ -10,8 +8,10 @@ set is_module_rm  [module-info mode remove]
 set sys           [uname sysname]
 set os            [uname release]
 
-set CUDA_VERSION 7.5
+set CUDA_VERSION 9.1
 set CUDA_PATH /usr/local/cuda-${CUDA_VERSION}
+
+setenv CUDA_ROOT $CUDA_PATH
 
 # PATH is complex because of our use of colornvcc and its symbolic linkage
 if { [ module-info mode load ] } {
@@ -23,9 +23,5 @@ if { [ module-info mode load ] } {
     prepend-path    PATH        $env(HOME)/local/bin
     prepend-path    PATH        $env(HOME)/bin
 }
+prepend-path    CPATH $CUDA_PATH/include
 prepend-path    LD_LIBRARY_PATH $CUDA_PATH/lib64:$CUDA_PATH/lib
-
-setenv          CXX             nvcc_wrapper
-setenv          OMPI_CXX        nvcc_wrapper
-setenv          OMPI_MPICXX     nvcc_wrapper
-setenv          OMPI_CXXFLAGS   "-ccbin g++"
