@@ -27,6 +27,7 @@ setenv          LLVM_PATH       $LLVM_PATH
 
 setenv          CC              clang
 setenv          CXX             clang++
+setenv          FC              flang
 setenv          OMPI_CC         clang
 setenv          OMPI_CXX        clang++
 setenv          OMPI_FC         flang
