@@ -1,0 +1,10 @@
+#%Module
+
+set _module_name  [module-info name]
+set is_module_rm  [module-info mode remove]
+set sys           [uname sysname]
+set os            [uname release]
+
+set KOKKOS_TOOLS_PATH $env(HOME)/code/kokkos/kokkos-tools
+
+setenv KOKKOS_PROFILE_LIBRARY $KOKKOS_TOOLS_PATH/src/tools/nvprof-connector/kp_nvprof_connector.so
